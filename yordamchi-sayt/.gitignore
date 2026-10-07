@@ -1,0 +1,27 @@
+logs/
+.local-logs/
+.local-data/
+*.log
+*.tmp
+uploads/
+Boostdaybot/*.log
+Boostdaybot/*.sqlite
+
+# Ilova belgisi — FOYDALANUVCHI ma'lumoti, serverda `save_app_icon` uni ustiga yozadi.
+# Git'da saqlansa, deploy vaqtida eski nusxa serverdagi haqiqiy belgini bosib ketardi.
+assets/icons/custom-app-icon-*.png
+
+# Deploy arxivi — har safar qaytadan yasaladi
+deploy.tar.gz
+
+# Ishlatilmaydigan eski fayllar (index.html hech qayerda chaqirmaydi)
+_eskirgan/
+
+# Yig'ilgan mahsulotlar — manba kod EMAS.
+# APK 42MB, DEB 11MB. Git ularni tarixda ABADIY saqlaydi (keyin o'chirilsa
+# ham), ya'ni ochiq repo doimiy 53MB shishardi va har klon shuni yuklardi.
+# Ular: (1) serverda turadi va sayt o'sha yerdan beradi,
+#       (2) GitHub Releases'ga yuklanadi — server yo'qolsa ham saqlanadi,
+#       (3) manbasi `yordamchi-app/` shu repoda, ya'ni qayta yasash mumkin.
+assets/downloads/*.apk
+assets/downloads/*.deb
